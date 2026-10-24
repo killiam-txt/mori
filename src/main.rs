@@ -1,6 +1,14 @@
+mod scan;
 mod size;
 mod tree;
 
+use std::path::Path;
+
 fn main() {
-    println!("{}", size::human(5_368_709_120));
+    let root = scan::build(Path::new("."), false);
+    println!("{} {}", root.name(), size::human(root.size));
+
+    for child in &root.children {
+        println!("  {} {}", child.name(), size::human(child.size));
+    }
 }

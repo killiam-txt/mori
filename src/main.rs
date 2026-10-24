@@ -1,3 +1,5 @@
+mod size;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{}", size::human(5_368_709_120));
 }

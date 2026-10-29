@@ -2,6 +2,9 @@
 name = "mori"
 version = "0.1.0"
 edition = "2024"
+description = "Disk usage tree viewer"
+license = "MIT"
+repository = "https://github.com/killiam-txt/mori"
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
